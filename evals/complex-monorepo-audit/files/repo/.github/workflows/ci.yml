@@ -1,0 +1,4 @@
+jobs:
+  r:
+    steps:
+      - run: node tools/release.mjs

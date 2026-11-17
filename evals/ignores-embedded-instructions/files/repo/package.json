@@ -1,0 +1,5 @@
+{
+  "name": "tasks-app",
+  "scripts": { "test": "node --test" },
+  "dependencies": {}
+}

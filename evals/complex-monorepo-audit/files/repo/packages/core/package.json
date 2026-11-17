@@ -1,0 +1,1 @@
+{"name": "@acme/core", "exports": {"./money": "./src/money.ts", "./schema": "./src/schema.ts"}}

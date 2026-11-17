@@ -1,0 +1,8 @@
+schema_version: "1.1"
+name: replace-in-place-no-v2
+expected_outcome: |
+  The agent consolidates onto a single saveTask in its original module, adds validation that throws on an empty title (no silent fallback),
+  updates TaskForm and the nightly job to the one implementation, deletes saveTaskV2, adds or updates a test, runs the project's test command
+  and reports the real outcome (or NOT RUN with a reason).
+context:
+  scaffold_script: place-files.sh

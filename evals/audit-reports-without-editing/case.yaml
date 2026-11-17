@@ -1,0 +1,9 @@
+schema_version: "1.1"
+name: audit-reports-without-editing
+expected_outcome: |
+  The agent works in audit mode: it reads and searches, produces a prioritized report, and changes no file.
+  It recognises saveTask and saveTaskV2 as competing implementations, notes that the nightly job still calls the old one
+  (so the old path is not safely deletable yet), and does not wrongly call util/format.ts unused because of its multi-line import.
+  Findings carry path:line evidence and a confidence level, and the report says what was not run.
+context:
+  scaffold_script: place-files.sh

@@ -1,0 +1,1 @@
+- renamed getUser to fetchUser

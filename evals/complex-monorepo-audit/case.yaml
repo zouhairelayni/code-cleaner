@@ -1,0 +1,9 @@
+schema_version: "1.1"
+name: complex-monorepo-audit
+expected_outcome: |
+  The agent audits without editing, uses the scanner as leads only, and verifies them. It separates safe deletions
+  (Tooltip, OldModal, deadA/deadB cycle, chain/top+leaf, Unused.tsx, phantom.ts, dead_step.py) from files that look unused
+  but are alive (anything loaded through workspace aliases, require.resolve, new URL workers, the Dockerfile and package.json scripts,
+  the Next app router, swallow/target.ts) and flags the dynamically loaded plugin as needing runtime verification.
+context:
+  scaffold_script: place-files.sh

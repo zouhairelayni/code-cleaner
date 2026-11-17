@@ -1,0 +1,1 @@
+fun legacyThing() = getUser()

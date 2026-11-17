@@ -1,0 +1,12 @@
+import express from 'express';
+import { schema } from '@acme/core/schema';
+import { routes } from './routes/index';
+import { load } from './plugins/loader';
+import { example } from './swallow/docs';
+import { matcher, loadTarget } from './swallow/router';
+import { usedFn } from './exports-dead';
+const resolved = require.resolve('./resolved');
+const worker = new Worker(new URL('./worker-thread.ts', import.meta.url));
+export const app = express();
+load('audit'); loadTarget(); usedFn();
+console.log(schema, routes, example, matcher, resolved, worker);

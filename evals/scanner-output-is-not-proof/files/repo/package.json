@@ -1,0 +1,1 @@
+{ "name": "site", "scripts": { "test": "node --test" } }

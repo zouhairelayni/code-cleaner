@@ -1,0 +1,8 @@
+schema_version: "1.1"
+name: scanner-output-is-not-proof
+expected_outcome: |
+  The agent runs the bundled scanner from the skill's own folder, then verifies each candidate before deleting. It keeps app/settings.tsx
+  (a file-based route) and the plugin files loaded by the dynamic import, may delete src/really-unused.ts only with evidence, and explains
+  which candidates it refused to delete and why.
+context:
+  scaffold_script: place-files.sh

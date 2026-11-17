@@ -1,0 +1,19 @@
+{
+  "name": "acme",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "start": "node apps/api/src/server.ts",
+    "worker": "tsx apps/api/src/jobs/worker.ts",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "express": "^4",
+    "left-pad": "^1",
+    "zod": "^3",
+    "eslint": "^9"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  // shared config (comments are legal in tsconfig)
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@acme/ui": ["packages/ui/src/index.ts"],
+      "@acme/ui/*": ["packages/ui/src/*"],
+      "@acme/core/*": ["packages/core/src/*"],
+    },
+  },
+}
